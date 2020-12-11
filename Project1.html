@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_elements.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="is-preload">
 	
@@ -35,19 +36,19 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1> Semantic Knowledge</h1>
-							
 							<div id="toc_container">
 								
 								<h3>Table of Content:</h3>
 								<ol class="toc_list">
 								<li><a href="#First_Point_Header">1. Abstract</a></li>
 								<li><a href="#Second_Point_Header">2. Biomedical Knowledge Graphs</a></li>
-								<li><a href="#Second_Point_Header">2. Graph Embeddings</a></li>
+								<li><a href="#Third_Point_Header">3. Graph Embeddings</a></li>
 								<ol>
-									<li><a href="#First_Sub_Point_1">2.1 First Sub Point 1</a></li>
+									<li><a href="#First_Sub_Point_1">3.1 First Sub Point 1</a></li>
 									<li><a href="#First_Sub_Point_2">2.2 First Sub Point 2</a></li>
 								</ol>
-								<li><a href="#Third_Point_Header">3. Reasoning in Knowledge Graphs</a></li>
+								<li><a href="#Fourth_Point_Header">4. Machine Learning Fundamentals</a></li>
+								<li><a href="#Fifth_Point_Header">5. Reasoning in Knowledge Graphs</a></li>
 								</ol>
 								</div>
 								
@@ -55,12 +56,30 @@
 								
 
 							</ol>
-							<h2 id="First_Point_Header">1. Biomedical Knowledge Graphs</h2>
-							<li>Knowledge Graphs</li>
-							<li>Graph Embeddings</li>
-							<li>Reasoning</li>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h2 id="First_Point_Header">Abstract </h2>
+
+							<p>The demand for clinical decision support systems in medicine and self-diagnostic symptom checkers has substantially increased in recent years. They depend on large biomedical databases, such as knowledge graphs (KG), to derive inferences. KGs express medical concepts as connections between multiple nodes in a graph. Most biomedical KGs are incomplete and miss relationships between nodes. <br>
+								This work employed a deep medical reasoning system to infer missing relationships from a biomedical KG by synthesizing existing information. A question answering (QA) framework is conducted to explicitly infer relationships that are not directly linked in the KG. An embedding-based model was trained to answer questions based on semantic similarities. We were able to achieve high accuracy scores using the statistic metrics Hits@k and MRR. Further investigations revealed limitations when facing more complex chains of reasoning and the lack of transparency in cases of misclassifications. Following the latest research, we were able to overcome these limitations by using a path-based, multi-hop reinforcement learning (RL) approach. We trained the RL agent and presented its ability to use the symbolic compositionality of relations in a qualitative analysis. Given a question, the agent 'walks' on the graph by choosing relations at each step. Thus, providing an explainable reasoning path. Such computational methods can help in a variety of downstream tasks, such as generate hypotheses of potential protein associations or predict explainable interactions in drug-symptom networks. </p>
+							
+							<h2 id="Second_Point_Header">Biomedical Knowledge Graphs</h2>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="images/KG_introduction.pdf" alt="" /></span></div>
+						</div>
+						</div
+							
+							
+							<p>  A Knowledge Graph represents knowledge in the form of interconnections between nodes and edges in a graph. It provides a structured representation of facts drawn from the relationships between entities. Where entities can be real-world objects or abstract concepts and Relationships represent the relation between them. The concept of representing knowledge in a graph initially gained traction in the web community by shifting from a ‘web of documents’ towards a semantic web. This new form of web content is structured and tagged to provide a meaningful representation for machines to explore the data. To regulate the way publishing and interlinking data on the web in relational manner works, the World Wide Web Consortium (W3C) released a collection of international standards, such as the Resource Description Framework (RDF). It defines the representation of a fact in the form of a triple HEAD, RELATION, TAIL, (h,r,t), or subject, predicate, object, (s,p,o). Appreciations are (h,r,t) and (s,p,o), respectively. A combination of multiple facts stored in a list is also known as a knowledge base (KB). The term knowledge base is synonymous with a knowledge graph with a minor difference. A knowledge graph can be viewed as a graph when considering its graph structure. When it involves formal semantics, it can be taken as a knowledge base for interpretation and inference over facts.   
+							</p>
+							
+							
+							<h2 id="Third_Point_Header">Graph embeddings</h2>
+							Graph embedding methods map the graph into low dimensional space. The embeddings can then be used as input 
+							<h2 id="Fifth_Point_Header">Machine Learning Fundamentals</h2>
+							
+
+
+
 						</div>
 					</section>
 
@@ -79,6 +98,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			
 	</body>
 </html>
