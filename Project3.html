@@ -41,29 +41,46 @@
 								<h3>Mission Statement</h3>
 									<blockquote>Build the next iteration of healthcare assistance robots form scratch</blockquote>
 								
-								<p>his work was conducted in 2016 during a six month internship period at the Singapore Polytechnic Robotics and Autonomous Systems Lab</p>
+								
 									<h3>Table of Content:</h3>
 								<ol class="toc_list">
-								<li><a href="#First_Point_Header">1. Biomedical Knowledge Graphs</a></li>
-								<li><a href="#Second_Point_Header">2. Graph Embeddings</a></li>
+								<li><a href="#First_Point_Header">1. Objective</a></li>
+								<li><a href="#Second_Point_Header">2. Technical Summary</a></li>
 								<ol>
-									<li><a href="#First_Sub_Point_1">2.1 First Sub Point 1</a></li>
-									<li><a href="#First_Sub_Point_2">2.2 First Sub Point 2</a></li>
+									<li><a href="#Second_Sub_Point_1">2.1 Hardware</a></li>
+									<li><a href="#Second_Sub_Point_2">2.2 Software</a></li>
 								</ol>
-								<li><a href="#Third_Point_Header">3. Reasoning in Knowledge Graphs</a></li>
-								</ol>
+								<li><a href="#Third_Point_Header">3. Team</a></li>
+
 								</div>
 								
 								
 								
-								<h2 id="First_Point_Header">1. Biomedical Knowledge Graphs</h2>
-								<li>Knowledge Graphs</li>
-								<li>Graph Embeddings</li>
-								<li>Reasoning</li>
-							</ol>
+								<h2 id="First_Point_Header">1. Objective</h2>
+								<p>The trend of technology today is to develop systems that incorporate the human as a part of their design so that these products could be suitable for human use. It is the same with robots. The aim of this project is to develop a social robot that can assist people in daily mundane tasks, such as delivering stuff, servicing customers, etc. In cooperation with our industry partners, we are designing this product to be used in healthcare environments, such as hospitals or nursing homes. The social robot will have one camera mounted on top as its “eyes”, a speaker, two arms and a mobile base to move around. The main task of this project for the SP Engineering Show 2016 is for the social robot to serve people by taking orders and delivering drinks. 30 students from SMAE and SEEE have been involved in this project. 
+									A mini-PC based on AMD processor has been applied to control the robot, including the technology of object recognition, speech recognition, arm motion operation, as well as mobile base navigation. With the integration of all the functions, the robot will be able to autonomously navigate itself, get orders from people and deliver drinks. The main focus of my project is the execution of the two Mico arms using ROS (Robot Operating System). Furthermore, the calculation and designing of the whole body structure including a mobile base for navigation.  
+									 </p>
+								
+								 <h2 id="Second_Point_Header">2. Technical Summary</h2>
+								 <p>This work was conducted in 2016 during a six-month internship period at the Robotics and Autonomous Systems Lab within Singapore Polytechnic in cooperation with various industry partners. As a co-learder of 12 students for different educational backgrounds we developed a 1.5m tall robot from scratch. Including Scope definition, System Design, Implementation, and Verification. Unfortunately, confidentiality rules apply which doesn’t allow me to publish technical details on the software implementation.   </p>
+									
+
+								 <h2 id="Second_Sub_Point_1">2.1 Hardware </h2>
+								 
+
+								 <div class="row gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="images/Robot_Design_Body.png" style="width: 15vw; min-width: 600px;" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/Robot_Design_Arm.png" style="width: 15vw; min-width: 600px;" alt="" /></span></div>
+								</div>
+								
+								<h2 id="Second_Sub_Point_2">2.1 Software </h2>	 
+								
+								 <p>Our entire software stack was developed based of ROS. It is an open-source operative system for robots. It provides the services of including hardware abstraction, low-level device control, implementation of commonly used functionality, message passing between processes, and package management. A ROS system is comprised of a number of independent nodes, each of which communicates with the other nodes using a publish/subscribe messaging model. We developed software for image segmentation and extract catesian coordinates from the given camera feed based on OpenCV. The coordinates are then published to the mico arm. We used Moveit! is a very powerful package to plan motions, manipulation, and collision checking algorithms. We designed the robots skeleton also called urdf (universal robot description file) to use the robot on simulation.  </p>	 	
+								
+								 <h2 id="Second_Point_Header">3. Team</h2>
+								 <div class="col-12"><span class="image fit"><img src="images/Singapore_Team.png" style="width: 15vw; min-width: 600px;" alt="" /></span></div>
 							
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							
 						</div>
 					</section>
 
