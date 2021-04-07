@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>Semantic Knowledge 💬</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main_elements.css" />
@@ -24,7 +24,7 @@
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="Project1.html" class="active">Projects</a></li>
-						<li><a href="elements.html">Elements</a></li>
+						
 					</ul>
 				</nav>
 			</header>
@@ -43,12 +43,11 @@
 								<li><a href="#First_Point_Header">1. Abstract</a></li>
 								<li><a href="#Second_Point_Header">2. Biomedical Knowledge Graphs</a></li>
 								<li><a href="#Third_Point_Header">3. Graph Embeddings</a></li>
+								<li><a href="#Fifth_Point_Header">4. Path-based Reasoning in Knowledge Graphs</a></li>
 								<ol>
-									<li><a href="#First_Sub_Point_1">3.1 First Sub Point 1</a></li>
-									<li><a href="#First_Sub_Point_2">2.2 First Sub Point 2</a></li>
+									<li><a href="#First_Sub_Point_2">4.2 Framework</a></li>
+									<li><a href="#First_Sub_Point_2">4.2 Policy Network</a></li>
 								</ol>
-								<li><a href="#Fourth_Point_Header">4. Machine Learning Fundamentals</a></li>
-								<li><a href="#Fifth_Point_Header">5. Reasoning in Knowledge Graphs</a></li>
 								</ol>
 								</div>
 								
@@ -67,19 +66,42 @@
 							<div class="col-6"><span class="image fit"><img src="images/KG_introduction.pdf" alt="" /></span></div>
 						</div>
 						</div
+
 							
 							
-							<p>  A Knowledge Graph represents knowledge in the form of interconnections between nodes and edges in a graph. It provides a structured representation of facts drawn from the relationships between entities. Where entities can be real-world objects or abstract concepts and Relationships represent the relation between them. The concept of representing knowledge in a graph initially gained traction in the web community by shifting from a ‘web of documents’ towards a semantic web. This new form of web content is structured and tagged to provide a meaningful representation for machines to explore the data. To regulate the way publishing and interlinking data on the web in relational manner works, the World Wide Web Consortium (W3C) released a collection of international standards, such as the Resource Description Framework (RDF). It defines the representation of a fact in the form of a triple HEAD, RELATION, TAIL, (h,r,t), or subject, predicate, object, (s,p,o). Appreciations are (h,r,t) and (s,p,o), respectively. A combination of multiple facts stored in a list is also known as a knowledge base (KB). The term knowledge base is synonymous with a knowledge graph with a minor difference. A knowledge graph can be viewed as a graph when considering its graph structure. When it involves formal semantics, it can be taken as a knowledge base for interpretation and inference over facts.   
-							</p>
+							<p>A Knowledge Graph represents knowledge in the form of interconnections between nodes and edges in a graph. It provides a structured representation of facts drawn from the relationships between entities. Where entities can be real-world objects or abstract concepts and Relationships represent the relation between them. The concept of representing knowledge in a graph initially gained traction in the web community by shifting from a ‘web of documents’ towards a semantic web. This new form of web content is structured and tagged to provide a meaningful representation for machines to explore the data. To regulate the way publishing and interlinking data on the web in relational manner works, the World Wide Web Consortium (W3C) released a collection of international standards, such as the Resource Description Framework (RDF). It defines the representation of a fact in the form of a triple HEAD, RELATION, TAIL, (h,r,t), or subject, predicate, object, (s,p,o). Appreciations are (h,r,t) and (s,p,o), respectively. A combination of multiple facts stored in a list is also known as a knowledge base (KB). The term knowledge base is synonymous with a knowledge graph with a minor difference. A knowledge graph can be viewed as a graph when considering its graph structure. When it involves formal semantics, it can be taken as a knowledge base for interpretation and inference over facts.</p>
 							
 							
 							<h2 id="Third_Point_Header">Graph embeddings</h2>
-							Graph embedding methods map the graph into low dimensional space. The embeddings can then be used as input 
-							<h2 id="Fifth_Point_Header">Machine Learning Fundamentals</h2>
+							<p>Graph embeddings mainly focuses on the process of learning low dimensional distributed embedding for entities and relations. 
+								Current literature uses real-valued point-wise space including vector, matrix and tensor space, while other kinds of space such as complex vector space, Gaussian space, and manifold are utilized as well. Models used can be categorized in translational distance an semantic matching. For further technical details please check out my corresponding blog post on Medium. 
+							</p>
+									
+
+
+							<a href="https://stoked-dan.medium.com/gentle-introduction-to-knowledge-representation-learning-1ee873830219" class="image fit"><img src="images/KRL.png" alt="" data-position="10% 10%" /></a>
+
+							<h2 id="Fifth_Point_Header">Path-based Reasoning in Knowledge Graphs</h2>
+
+							<p> Learning embeddings of entities and relations using tensor factorization or neural methods to optimize a predefined scoring function between facts in the KG, achieves outstanding results on standard benchmark datasets. However, these methods cannot capture chains of reasoning expressed by paths in the KG and cannot capture the full underlying semantics. Path-based models address these problems by scoring facts based either on random walks over the KBs (path ranking) or by encoding entire paths in a vector space (path encoding). </p>
 							
+							<h3 id="Fifth_Point_Header">Framework</h3>
 
+							<div class="box alt">
+								<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="images/Framework.png" alt="" /></span></div>
+						</div>	
+							<p> The framework based on a classical two component RL scenario modeled as a Markov Decision Process.
+								Lower part: The environment incorporates to the whole KG.
+								Upper part: A representation of the policy network, which outputs the probabilities for choosing the next action.
+								At each step t, the agent interacts with the environment and learns selecting a relation link to extend the reasoning path. </p>
+							<h3 id="Fifth_Point_Header">Policy Network</h3>
 
-
+								<div class="box alt">
+								<div class="row gtr-uniform">
+								<div class="col-6"><span class="image fit"><img src="images/Policy_Network.png" alt="" /></span></div>
+							</div>	
+							<p>The policy network outputs a probability distribution over possible actions. For the sake of simplicity, the model can be divided into two parts. A path encoder (left) and the Action Space At (right), which in the end gets combined using scalar multiplication. The path encoder contains global context and the search history. Wheres A_t is a matrix containing all available actions. The scalar product combines both and outputs a probability distribution over all available actions. Where we then use a categorical distribution to select a specific action A_t</p>
 						</div>
 					</section>
 
